@@ -1,0 +1,166 @@
+/*Estilo Formulario Registro*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+}
+.container_register{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin: 0 15px;
+    
+}
+.container_register .content{
+    align-items: center;
+}
+
+.content .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+.content .alert-bad{
+    color: red;
+    font-size: 16px;
+}
+.content .alert-good{
+    color: #4070f4;
+    font-size: 16px;
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 5px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 20px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.user-details :where(.input-box input, .select-box){
+    position: relative;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: none;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    border-bottom-width: 4px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #4070f4;
+}
+
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .button{
+    height: 50px;
+    margin-top: 35px 5px;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form .button input:hover{
+    background-color: #265df2;
+}
+
+.content .text{
+    color: #333;
+    font-size: 14px;
+}
+.content a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.content a:hover{
+    text-decoration: underline;
+}
+.content .form-register{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile :where(input .select-box){
+    margin-top: 15px;
+
+}
+.content .column{
+    display: flex;
+    column-gap: 45px;
+}
+
+.select-box select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #333;
+    font-size: 16px;
+}
+
+
+@media(max-width: 584px){
+   .container_register{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .category{
+        width: 100%;
+    }
+    .content form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 5px;
+    }
+    }
+    @media(max-width: 459px){
+    .container_register .content .category{
+        
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,15 @@
+
+<?php
+    include "php/conexion.php";
+
+    $query = mysqli_query($mysqli, "SELECT areas.area_nombre FROM usuarios,areas where areas.id_area=usuarios.area_id and usuarios.nombre_usuario='".$nombre_usuario."' ");
+    $result = mysqli_num_rows($query);
+    
+    if ($result > 0) {
+        while ($data = mysqli_fetch_assoc($query)) { ?>
+        <tr>
+            <td><center><?php echo $data['area_nombre']; ?></center></td>
+        </tr>
+    <?php }
+    } ?>
+    

@@ -41,56 +41,35 @@
     $query = mysqli_query($mysqli, "SELECT areas.area_nombre FROM usuarios,areas where areas.id_area=usuarios.area_id and usuarios.nombre_usuario='".$nombre_usuario."' ");
     $result = mysqli_num_rows($query);
     
-    if ($result > 0) {
-        while ($data = mysqli_fetch_assoc($query)) { ?>
-        <tr>
-            <td><center><?php echo $data['area_nombre']; ?></center></td>
-        </tr>
-    <?php }
-    } ?>
+    ?>
 
     <div>
     <h1 class="title">AREAS MENU</h1>
         <p class="description">Welcome! If you have an area you can enter</p>
     </div>
     
-    <section class="card">
-        <div class="card_area">
-            <div class="card_name">
-                <h2>Title:</h2> 
-            </div>
-            <hr>
-
-            <hr>
-            
-            <div class="card_button">
-                <a class="link" href="dashboard.php">Enter</a>
-            </div>           
-        </div>
-
-        <!--<div class="card_area">
-            <div class="card_name">
-                <img src="img/" alt="">
-                <h2>EPS PLAIN</h2>
+    <?php
+	    if ($result > 0) {
+        while ($data = mysqli_fetch_assoc($query)) { ?>
+        <section class="card">
+		    <div class="card_area">
+		       <div class="card_name">
+			        <h2>Title:<?php echo $data['area_nombre']; ?></h2> 
+		        </div>
+		        <hr>
                 <hr>
-                <form action="php/saveImagen.php" method="POST" enctype="multipart/form-data">
-                    <div class="file">                    
-                        <label for="archivo">Select image</label>
-                        <input type="file" name="imagen" id="archivo" require>
-                        <input type="submit" value="Accept">
-                    </div>
-                </form>
-            </div>
-            <hr>
-            <div class="card_button">
-                <a class="link" href="#">Enter</a>
-            </div>-->           
-        </div>
-       
-        
-    </section>
 
-    
+                <div class="card_button">
+                    <form action="dashboard.php" method="POST">
+                        <input type="hidden" name="pefil_id" value="0">
+                        <input class="link" type="submit" value="Enter">
+                    </form>
+                <!--<a class="link" href="dashboard.php">Enter</a>-->
+                </div>           
+            </div>
+        </section>
+    <?php }
+    } ?>    
 </body>
 </html>
     

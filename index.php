@@ -27,7 +27,7 @@
 				$_SESSION['email'] = $row['email'];
 				$_SESSION['perfil_id'] = $row['perfil_id'];
 				
-				header("Location: system/dashboard.php");	
+				header("Location: system/mainAreas.php");	
 
 			} else {
             $alert = '<center><p class="alert">

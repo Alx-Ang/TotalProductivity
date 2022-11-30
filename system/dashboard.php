@@ -44,15 +44,15 @@
                     <span class="link-name">Areas</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-bright"></i>
+                    <i class="uil uil-setting"></i>
                     <span class="link-name">Work Center</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-layer-group"></i>
+                    <i class="uil uil-layers"></i>
                     <span class="link-name">Raw Materials</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-map-pin-alt"></i>
+                    <i class="uil uil-box"></i>
                     <span class="link-name">Product</span>
                 </a></li>
                 <li><a href="#">
@@ -77,7 +77,7 @@
                     <span class="link-name">Supervisors Form</span>
                 </a></li>
                 <li><a href="#">
-                    <i class="uil uil-bright"></i>
+                    <i class="uil uil-edit-alt"></i>
                     <span class="link-name">Production Form</span>
                 </a></li>
             </ul>

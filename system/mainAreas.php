@@ -35,39 +35,45 @@
             <li><a><?php echo $nombre_usuario; ?> </a></li>
         </ul>
     </nav>
-    <?php
-    include "php/conexion.php";
 
-    $query = mysqli_query($mysqli, "SELECT areas.area_nombre FROM usuarios,areas where areas.id_area=usuarios.area_id and usuarios.nombre_usuario='".$nombre_usuario."' ");
-    $result = mysqli_num_rows($query);
-    
+    <?php
+        include "php/conexion.php";
+
+        $query = mysqli_query($mysqli, "SELECT areas.area_nombre FROM usuarios,areas where areas.id_area=usuarios.area_id and usuarios.nombre_usuario='".$nombre_usuario."' ");
+        $result = mysqli_num_rows($query);  
     ?>
 
-    <div>
-    <h1 class="title">AREAS MENU</h1>
+    <div class="">
+        <h1 class="title">AREAS MENU</h1>
         <p class="description">Welcome! If you have an area you can enter</p>
     </div>
     
     <?php
 	    if ($result > 0) {
         while ($data = mysqli_fetch_assoc($query)) { ?>
-        <section class="card">
-		    <div class="card_area">
-		       <div class="card_name">
-			        <h2>Title:<?php echo $data['area_nombre']; ?></h2> 
-		        </div>
-		        <hr>
-                <hr>
-
-                <div class="card_button">
-                    <form action="dashboard.php" method="POST">
-                        <input type="hidden" name="pefil_id" value="0">
-                        <input class="link" type="submit" value="Enter">
-                    </form>
-                <!--<a class="link" href="dashboard.php">Enter</a>-->
-                </div>           
+    <section class="card">
+		<div class="card_area">
+		    <div class="card_name">
+			    <h2><?php echo $data['area_nombre']; ?></h2>
+                <p class="description">Seleccione una imagen para su area</p> 
+		    </div>
+            <hr>
+            
+            <div class="card_img">
+                <p class="description">Imagen del area</p>
             </div>
-        </section>
+            <hr>
+                
+            <div class="card_button">
+                <form action="dashboard.php" method="POST">
+                    <a class="link">    
+                        <input type="hidden" name="pefil_id" value="0">
+                        <input type="submit" value="Enter">
+                    </a>
+                </form>
+            </div>           
+        </div>
+    </section>
     <?php }
     } ?>    
 </body>

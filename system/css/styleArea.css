@@ -106,12 +106,18 @@ hr{
 } 
 
 .link input{
-    background: #4070f4;
-    border: solid #4070f400;
+    background-color: #4070f4;
+    border: none;
     padding: 8px 20px;
     color: white;
     font-size: 17px;
     border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.link input:hover{
+    background-color: #265df2;
 }
 
 

@@ -39,7 +39,7 @@
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dahsboard</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="areas.php">
                     <i class="uil uil-map-marker"></i>
                     <span class="link-name">Areas</span>
                 </a></li>
@@ -83,21 +83,20 @@
             </ul>
             
             <ul class="logout-mode">
-                <li><a  href="php/logout.php">
+                <li><a  href="mainAreas.php">
                     <i class="uil uil-signout"></i>
                     <span class="link-name">Logout</span>
                 </a></li>
 
-                <!--<li class="mode">
+                <li class="mode">
                     <a href="#">
                         <i class="uil uil-moon"></i>
-                    <span class="link-name">Dark Mode</span>
-                </a>
-
-                <div class="mode-toggle">
-                  <span class="switch"></span>
-                </div>-->
-            </li>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -110,15 +109,17 @@
                 <i class="uil uil-search"></i>
                 <input type="text" placeholder="Search here...">
             </div>
-            <?php echo $nombre_usuario;?>
+            
+            <span class="text"> <?php echo $nombre_usuario;?> </span>
             <img src="img/user.png" alt="">
+                
         </div>
 
         <div class="dash-content">
-            <div class="overview">
+            <!--<div class="overview">
                 <div class="title">
-                    <!--<i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>-->
+                    i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text"> Dashboard General </span>
                 </div>
 
                 <div class="boxes">
@@ -138,12 +139,12 @@
                         <span class="number">10,120</span>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
-            <div class="activity">
+            <!--<div class="activity">
                 <div class="title">
-                    <!--<i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Activity</span>-->
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
                 </div>
 
                 <div class="activity-data">
@@ -198,7 +199,7 @@
                         <span class="data-list">Liked</span>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
 
